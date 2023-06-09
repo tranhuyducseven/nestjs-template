@@ -1,0 +1,12 @@
+{
+    "directory": [
+        "./src/common/dto",
+        "./src/constants",
+        "./src/decorators",
+        "./src/exceptions",
+        "./src/interfaces",
+        "./src/providers"
+    ],
+    "exclude": ["__mock__", "__mocks__", ".spec.ts"],
+    "delete": true
+}
