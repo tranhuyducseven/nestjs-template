@@ -1,5 +1,5 @@
 {
-  "name": "ochapter",
+  "name": "nestjs-template",
   "version": "0.0.1",
   "description": "Awesome NestJS Boilerplate, Typescript, Postgres, TypeORM",
   "license": "MIT",

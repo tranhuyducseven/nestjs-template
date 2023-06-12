@@ -9,9 +9,9 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
-import { MemberDto } from '../ochapter/dtos/member.dto';
-import { MemberEntity } from '../ochapter/entities/member.entity';
-import { MemberService } from '../ochapter/services/member.service';
+import { MemberDto } from '../example/dtos/member.dto';
+import { MemberEntity } from '../example/entities/member.entity';
+import { MemberService } from '../example/services/member.service';
 import { Auth, AuthMember } from '../../decorators';
 import { UserNotFoundException } from '../../exceptions';
 import { AuthService } from './auth.service';

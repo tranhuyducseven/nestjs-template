@@ -1,7 +1,6 @@
 import bcrypt from 'bcrypt';
 
 import type { Optional } from '../types';
-
 /**
  * generate hash from password or string
  * @param {string} password
@@ -29,6 +28,7 @@ export function validateHash(
 }
 
 export function getVariableName<TResult>(getVar: () => TResult): string {
+
   const m = /\(\)=>(.*)/.exec(
     getVar.toString().replace(/(\r\n|\n|\r|\s)/gm, ''),
   );

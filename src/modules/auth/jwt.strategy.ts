@@ -1,7 +1,7 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
-import { MemberEntity } from '../ochapter/entities/member.entity';
-import { MemberService } from '../ochapter/services/member.service';
+import { MemberEntity } from '../example/entities/member.entity';
+import { MemberService } from '../example/services/member.service';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { TokenType } from '../../constants';
 import { ApiConfigService } from '../../shared/services/api-config.service';

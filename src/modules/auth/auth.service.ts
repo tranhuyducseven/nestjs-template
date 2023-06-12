@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { MemberEntity } from '../ochapter/entities/member.entity';
-import { MemberService } from '../ochapter/services/member.service';
+import { MemberEntity } from '../example/entities/member.entity';
+import { MemberService } from '../example/services/member.service';
 import { validateHash } from '../../common/utils';
 import { TokenType } from '../../constants';
 import { UserNotFoundException } from '../../exceptions';

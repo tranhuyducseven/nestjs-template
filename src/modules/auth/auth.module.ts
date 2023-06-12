@@ -3,7 +3,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 
 import { ApiConfigService } from '../../shared/services/api-config.service';
-import { OChapterModule } from '../ochapter/ochapter.module';
+import { ExampleModule } from '../example/example.module';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { JwtStrategy } from './jwt.strategy';
@@ -12,7 +12,7 @@ import { PublicStrategy } from './public.strategy';
 
 @Module({
   imports: [
-    forwardRef(() => OChapterModule),
+    forwardRef(() => ExampleModule),
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.registerAsync({
       useFactory: (configService: ApiConfigService) => ({
