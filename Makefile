@@ -1,10 +1,9 @@
 dev_up:
-	docker-compose up -d --remove-orphans
 	yarn run start:dev
 
 bootstrap:
 	yarn install
-	docker-compose up -d --remove-orphans
+	docker-compose -f docker-compose.dev.yml up -d --remove-orphans
 
 clean_dev: 
 	docker-compose -f docker-compose.dev.yml down --volumes --remove-orphans

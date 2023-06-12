@@ -34,7 +34,8 @@
     "docs:build": "DEPLOY_ENV=gh-pages vuepress build",
     "docs:deploy": "yarn docs:build && gh-pages -d .vuepress/dist",
     "prerelease": "yarn docs:deploy",
-    "release": "release-it"
+    "release": "release-it",
+    "bootstrap": "yarn install && docker-compose -f docker-compose.dev.yml up -d --remove-orphans"
   },
   "dependencies": {
     "@nanogiants/nestjs-swagger-api-exception-decorator": "^1.6.0",

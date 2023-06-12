@@ -1,12 +1,12 @@
 version: "3"
 services:
-  nestjs_template:
-    container_name: nestjs_template
-    build: .
-    restart: always
-    ports:
-      - 3000:3000
-    env_file: .env
+  # nestjs_template:
+  #   container_name: nestjs_template
+  #   build: .
+  #   restart: always
+  #   ports:
+  #     - 3000:3000
+  #   env_file: .env
 
   postgres:
     image: postgres:15

@@ -15,6 +15,12 @@ cp .env.example .env
 make bootstrap
 ```
 
+or
+
+```bash
+yarn bootstrap
+```
+
 ### 2. Run database migration
 
 ```bash
