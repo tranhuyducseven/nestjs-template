@@ -8,7 +8,7 @@ Run command
 
 ```bash
 cp .docker.env_example .docker.env
-cp .env.example .env
+cp .env.file .env
 ```
 
 ```bash

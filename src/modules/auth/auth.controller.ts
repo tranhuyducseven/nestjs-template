@@ -9,9 +9,9 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
-import { MemberDto } from '../example/dtos/member.dto';
-import { MemberEntity } from '../example/entities/member.entity';
-import { MemberService } from '../example/services/member.service';
+import { MemberDto } from '../file/dtos/member.dto';
+import { MemberEntity } from '../file/entities/member.entity';
+import { MemberService } from '../file/services/member.service';
 import { Auth, AuthMember } from '../../decorators';
 import { UserNotFoundException } from '../../exceptions';
 import { AuthService } from './auth.service';
@@ -46,7 +46,7 @@ export class AuthController {
     return new LoginPayloadDto(memberEntity.toDto(), token);
   }
 
-  
+
   @Get('me')
   @HttpCode(HttpStatus.OK)
   @Auth()

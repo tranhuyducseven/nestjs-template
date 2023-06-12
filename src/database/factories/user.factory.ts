@@ -1,7 +1,7 @@
 // import { define } from 'typeorm-seeding';
 
 // import { RoleType } from '../../constants';
-// import { UserEntity } from '../../modules/example/entities/user.entity';
+// import { UserEntity } from '../../modules/file/entities/user.entity';
 
 // define(UserEntity, (faker) => {
 //   const gender = faker.random.number(1);

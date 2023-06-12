@@ -14,10 +14,12 @@ import {
   patchTypeORMRepositoryWithBaseRepository,
 } from "typeorm-transactional-cls-hooked";
 
-import { AppModule } from "./app.module";
+import { AppModule } from "@app";
 import { setupSwagger } from "./setup-swagger";
-import { ApiConfigService } from "./shared/services/api-config.service";
-import { SharedModule } from "./shared/shared.module";
+import {ApiConfigService} from "./shared/services/api-config.service";
+import {SharedModule} from "./shared/shared.module";
+// import { ApiConfigService } from "./shared/services/api-config.service";
+// import { SharedModule } from "./shared/shared.module";
 
 export async function bootstrap(): Promise<NestExpressApplication> {
   initializeTransactionalContext();

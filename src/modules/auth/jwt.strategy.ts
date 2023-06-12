@@ -1,7 +1,7 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
-import { MemberEntity } from '../example/entities/member.entity';
-import { MemberService } from '../example/services/member.service';
+import { MemberEntity } from '../file/entities/member.entity';
+import { MemberService } from '../file/services/member.service';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { TokenType } from '../../constants';
 import { ApiConfigService } from '../../shared/services/api-config.service';
@@ -27,7 +27,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     if (args.type !== TokenType.ACCESS_TOKEN) {
       throw new UnauthorizedException();
     }
-    
+
     const member = await this.memberService.authenticateMember({
       id: args.memberId,
     });

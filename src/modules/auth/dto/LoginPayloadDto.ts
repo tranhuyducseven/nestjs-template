@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { MemberDto } from '../../example/dtos/member.dto';
+import { MemberDto } from '../../file/dtos/member.dto';
 
 import { TokenPayloadDto } from './TokenPayloadDto';
 

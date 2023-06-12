@@ -6,7 +6,7 @@ import { GeneratorProvider } from '../providers';
 
 /**
  * @description trim spaces from start and end, replace multiple spaces with one.
- * @example
+ * @file
  * @ApiProperty()
  * @IsString()
  * @Trim()
@@ -44,7 +44,7 @@ export function ToBoolean(): PropertyDecorator {
 
 /**
  * @description convert string or number to integer
- * @example
+ * @file
  * @IsNumber()
  * @ToInt()
  * name: number;
@@ -64,7 +64,7 @@ export function ToInt(): PropertyDecorator {
 
 /**
  * @description transforms to array, specially for query params
- * @example
+ * @file
  * @IsNumber()
  * @ToArray()
  * name: number;
