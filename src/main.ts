@@ -14,10 +14,10 @@ import {
   patchTypeORMRepositoryWithBaseRepository,
 } from "typeorm-transactional-cls-hooked";
 
-import { AppModule } from "@app";
 import { setupSwagger } from "./setup-swagger";
 import {ApiConfigService} from "./shared/services/api-config.service";
 import {SharedModule} from "./shared/shared.module";
+import { AppModule } from "./app.module";
 // import { ApiConfigService } from "./shared/services/api-config.service";
 // import { SharedModule } from "./shared/shared.module";
 

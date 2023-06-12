@@ -36,7 +36,7 @@
       "@providers": ["src/providers/*"],
       "@shared": ["src/shared/*"],
       "@validators": ["src/validators/*"],
-      "@app": ["src/app.module.ts"],
+      // "@app": ["src/app.module.ts"],
       "@types": ["src/types.ts"]
     }
   },
