@@ -2,9 +2,7 @@ import './boilerplate.polyfill';
 
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { APP_FILTER } from '@nestjs/core';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import path from 'path';
 
 import { AuthModule } from './modules/auth/auth.module';
 import { ExampleModule } from './modules/example/example.module';
