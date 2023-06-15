@@ -11,20 +11,40 @@ services:
   postgres:
     image: postgres:15
     container_name: postgres
-    restart: always
+    # restart: always
     ports:
       - "5432:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
-    env_file: .docker.env
+    environment:
+      - POSTGRES_DB=${DB_DATABASE}
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+
+  minio:
+    image: 'minio/minio:latest'
+    container_name: opendata-minio
+    hostname: minio
+    ports:
+      - '9001:9001'
+      - '9000:9000'
+    volumes:
+      - ./minio/data:/data
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+    command: server /data --console-address ":9001"
 
   adminer:
     image: adminer
-    restart: always
+    # restart: always
     links:
       - postgres:postgres
     ports:
       - 8080:8080
+
+
+
 
 volumes:
   pg_data:

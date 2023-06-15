@@ -26,18 +26,7 @@
     "lib": ["ESNext", "dom", "ESNext.AsyncIterable"],
     "typeRoots": ["./node_modules/@types"],
     "paths": {
-      "@common": ["src/common/*"],
-      "@constants": ["src/constants"],
-      "@database": ["src/database/*"],
-      "@exceptions": ["src/exceptions/*"],
-      "@guards": ["src/guards/*"],
-      "@interfaces": ["src/interfaces/*"],
-      "@modules": ["src/modules/*"],
-      "@providers": ["src/providers/*"],
-      "@shared": ["src/shared/*"],
-      "@validators": ["src/validators/*"],
-      // "@app": ["src/app.module.ts"],
-      "@types": ["src/types.ts"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src", "**/*.js", "**/*.ts", "test"],

@@ -1,11 +1,10 @@
-import { MulterModule } from "@nestjs/platform-express";
-import { FileController } from "./controllers/file.controller";
 import { Module } from "@nestjs/common";
+import { FileController } from "./controllers/file.controller";
+import { MinIOService } from "../../shared/services/minio-s3.service";
+import { GeneratorService } from "../../shared/services/generator.service";
 
 @Module({
-  imports: [MulterModule.register({
-    dest: './files',
-  })],
+  providers: [MinIOService, GeneratorService],
   controllers: [FileController],
 })
 export class FileModule {}
